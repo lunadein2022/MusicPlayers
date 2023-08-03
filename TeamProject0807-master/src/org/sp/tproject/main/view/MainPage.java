@@ -15,7 +15,7 @@ public class MainPage extends Page{
 	JPanel p_east; //현재시간, 뽀모도로를 담을 오른쪽 패널
 	
 	CurrentTime ct; //현재 시간
-	MediaPlayer mediaPlayer; // MediaPlayer 인스턴스를 멤버 변수로 선언합니다.
+	MusicPlayerDesign musicPlayer; // MediaPlayer 인스턴스를 멤버 변수로 선언합니다.
 	
 	public MainPage() {
 		p_west=new JPanel();
@@ -23,7 +23,7 @@ public class MainPage extends Page{
 		p_east=new JPanel();
 		//컨텐츠 생성
 		ct=new CurrentTime();
-		mediaPlayer = new MediaPlayer(); // MediaPlayer 인스턴스를 생성합니다.
+		musicPlayer = new MusicPlayerDesign();// MediaPlayer 인스턴스를 생성합니다.
 		
 		
 		//스타일
@@ -43,9 +43,9 @@ public class MainPage extends Page{
 		
 		//조립
 		p_east.add(ct); //현재 시간을 오른쪽 영역 상단에 부착
-        p_west.add(mediaPlayer); // MediaPlayer를 p_west 패널에 추가합니다.
+		p_west.add(musicPlayer);
 		
-		add(p_west, BorderLayout.WEST);
+		add(p_west, BorderLayout.WEST); 
 		add(p_center);
 		add(p_east, BorderLayout.EAST);
 		
